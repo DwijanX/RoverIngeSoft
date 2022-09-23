@@ -26,4 +26,7 @@ describe("Rover Test", () => {
   it("Se envia una instruccion de giro a la izquierda al rover hasta volver a N", () => {
     expect(rover.recieveInstructions("IIII")).toEqual("0,0N");
   });
+  it("Se envia de giro para avanzar al Este", () => {
+    expect(rover.recieveInstructions("DA")).toEqual("1,0E");
+  });
 });
