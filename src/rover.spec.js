@@ -29,4 +29,7 @@ describe("Rover Test", () => {
   it("Se envia de giro para avanzar al Este", () => {
     expect(rover.recieveInstructions("DA")).toEqual("1,0E");
   });
+  it("Se prueba avanzar al sur", () => {
+    expect(rover.recieveInstructions("AIIA")).toEqual("0,0S");
+  });
 });
