@@ -45,6 +45,8 @@ class Rover{
       if(direction=="S")
       {
         this.posY-=1
+        if(this.posY<0)
+            this.posY=0
       }
       if(direction=="W")
       {

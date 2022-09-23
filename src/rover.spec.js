@@ -44,4 +44,7 @@ describe("Rover Test", () => {
   it("Se trata de salir de la matriz por la derecha", () => {
     expect(rover.recieveInstructions("IA")).toEqual("0,0W");
   });
+  it("Se trata de salir de la matriz por abajo", () => {
+    expect(rover.recieveInstructions("IIA")).toEqual("0,0S");
+  });
 });
