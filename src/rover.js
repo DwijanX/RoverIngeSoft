@@ -41,6 +41,10 @@ class Rover{
       {
         this.posY-=1
       }
+      if(direction=="W")
+      {
+        this.posX-=1
+      }
     }
     TurnDirection(Dir)
     {

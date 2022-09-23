@@ -32,4 +32,7 @@ describe("Rover Test", () => {
   it("Se prueba avanzar al sur", () => {
     expect(rover.recieveInstructions("AIIA")).toEqual("0,0S");
   });
+  it("Se prueba avanzar al oeste", () => {
+    expect(rover.recieveInstructions("DAIIA")).toEqual("0,0W");
+  });
 });
