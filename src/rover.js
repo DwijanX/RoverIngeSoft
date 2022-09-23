@@ -13,9 +13,12 @@ class Rover{
     }
     recieveInstructions(instruction)
     {
-        if(instruction=="A")
+        for(let i=0;i<instruction.length;i++)
         {
-            this.moveBasedOnDirection()
+            if(instruction[i]=="A")
+            {
+                this.moveBasedOnDirection()
+            }
         }
         return this.getPositionString()
     }
