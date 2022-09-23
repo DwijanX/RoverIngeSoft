@@ -1,15 +1,10 @@
-import sumar from "./sumador";
-
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
+import Rover from "./rover.js";
+const RoverInstructions = document.querySelector("#RoverInstructions");
+const form = document.querySelector("#instructions-form");
 const div = document.querySelector("#resultado-div");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
-
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+  let rover=new Rover(10)
+  div.innerHTML = "<p>" + rover.recieveInstructions(RoverInstructions.value) + "</p>";
 });
