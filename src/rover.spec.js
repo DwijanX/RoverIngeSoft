@@ -38,7 +38,10 @@ describe("Rover Test", () => {
   it("Se trata de salir de la matriz por arriba", () => {
     expect(rover.recieveInstructions("AAAAAAAAAAAA")).toEqual("0,10N");
   });
-  it("Se trata de salir de la matriz por arriba", () => {
+  it("Se trata de salir de la matriz por la izquierda", () => {
     expect(rover.recieveInstructions("DAAAAAAAAAAAA")).toEqual("10,0E");
+  });
+  it("Se trata de salir de la matriz por la derecha", () => {
+    expect(rover.recieveInstructions("IA")).toEqual("0,0W");
   });
 });

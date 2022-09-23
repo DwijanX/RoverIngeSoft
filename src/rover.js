@@ -49,6 +49,8 @@ class Rover{
       if(direction=="W")
       {
         this.posX-=1
+        if(this.posX<0)
+            this.posX=0
       }
     }
     TurnDirection(Dir)
