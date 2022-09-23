@@ -39,6 +39,8 @@ class Rover{
       if(direction=="E")
       {
         this.posX+=1
+        if(this.posX>this.max)
+            this.posX=this.max
       }
       if(direction=="S")
       {
