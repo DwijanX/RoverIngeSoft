@@ -3,7 +3,7 @@ import Rover from "./rover.js";
 describe("Rover Test", () => {
   let rover;
   beforeEach(()=>{
-    rover=new Rover()
+    rover=new Rover(10)
   })
   it("Se envia una instruccion vacia al Rover", () => {
     expect(rover.recieveInstructions("")).toEqual("0,0N");
@@ -34,5 +34,8 @@ describe("Rover Test", () => {
   });
   it("Se prueba avanzar al oeste", () => {
     expect(rover.recieveInstructions("DAIIA")).toEqual("0,0W");
+  });
+  it("Se trata de salir de la matriz por arriba", () => {
+    expect(rover.recieveInstructions("AAAAAAAAAAAA")).toEqual("0,10N");
   });
 });

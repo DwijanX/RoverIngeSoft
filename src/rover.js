@@ -4,6 +4,7 @@ class Rover{
       this.posY=0;
       this.directionIndex=0;
       this.directionsArray=["N","E","S","W"];
+      this.max=max
     }
     getPositionString()
     {
@@ -32,6 +33,8 @@ class Rover{
       if(direction=="N")
       {
         this.posY+=1
+        if(this.posY>this.max)
+            this.posY=this.max
       }
       if(direction=="E")
       {
