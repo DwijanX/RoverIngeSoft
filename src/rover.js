@@ -3,7 +3,7 @@ class Rover{
       this.posX=0;
       this.posY=0;
       this.directionIndex=0;
-      this.directionsArray=["N","E","S","O"];
+      this.directionsArray=["N","E","S","W"];
     }
     getPositionString()
     {
@@ -41,6 +41,12 @@ class Rover{
             this.directionIndex+=1
             if(this.directionIndex>3)
                 this.directionIndex=0
+        }
+        if(Dir=="I")
+        {
+            this.directionIndex-=1
+            if(this.directionIndex<0)
+                this.directionIndex=3
         }
     }
   }
