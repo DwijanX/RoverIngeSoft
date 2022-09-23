@@ -13,7 +13,19 @@ class Rover{
     }
     recieveInstructions(instruction)
     {
-      return this.getPositionString()
+        if(instruction=="A")
+        {
+            this.moveBasedOnDirection()
+        }
+        return this.getPositionString()
+    }
+    moveBasedOnDirection()
+    {
+      let direction=this.directionsArray[this.directionIndex]
+      if(direction=="N")
+      {
+        this.posY+=1
+      }
     }
   }
   export default Rover;
