@@ -19,6 +19,10 @@ class Rover{
             {
                 this.moveBasedOnDirection()
             }
+            else
+            {
+                this.TurnDirection(instruction[i])
+            }
         }
         return this.getPositionString()
     }
@@ -29,6 +33,15 @@ class Rover{
       {
         this.posY+=1
       }
+    }
+    TurnDirection(Dir)
+    {
+        if(Dir=="D")
+        {
+            this.directionIndex+=1
+            if(this.directionIndex>3)
+                this.directionIndex=0
+        }
     }
   }
   export default Rover;

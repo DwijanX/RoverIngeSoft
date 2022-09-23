@@ -14,4 +14,7 @@ describe("Rover Test", () => {
   it("Se envia varias instrucciones de movimiento al rover", () => {
     expect(rover.recieveInstructions("AAA")).toEqual("0,3N");
   });
+  it("Se envia una instruccion de giro a la derecha al rover", () => {
+    expect(rover.recieveInstructions("D")).toEqual("0,0E");
+  });
 });
